@@ -1,13 +1,14 @@
 {
     "name": "entelect-challenge-2020",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "dist/index.main.js",
     "author": "Adrian <BeanHeaDza@users.noreply.github.com>",
     "license": "MIT",
     "scripts": {
         "build": "rollup -c",
         "build:watch": "rollup -c --watch",
-        "start": "node dist/index.main.js"
+        "start": "node dist/index.main.js",
+        "zip": "git archive -o output/source.zip HEAD"
     },
     "devDependencies": {
         "@babel/cli": "^7.7.7",
