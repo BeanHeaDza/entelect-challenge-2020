@@ -1,3 +1,4 @@
+import { existsSync, mkdirSync } from 'fs';
 import { runMap } from './run-map.function';
 
 function numberWithSpaces(num: number): string {
@@ -6,6 +7,10 @@ function numberWithSpaces(num: number): string {
 
 const mapsToRun = [1, 2, 3, 4, 5];
 let grandTotal = 0;
+
+if (!existsSync('output')) {
+    mkdirSync('output');
+}
 
 for (let i = 0; i < mapsToRun.length; i++) {
     const score = runMap(mapsToRun[i]);
