@@ -5,7 +5,7 @@ import { IShapeJson } from './shape-json.model';
 import { IShape } from './shape.model';
 
 export function parseShape(shape: IShapeJson): IShape {
-    const orientations = getAllRotationsAndReflections(shape).map(orientation => {
+    const orientations = getAllRotationsAndReflections(shape).map((orientation) => {
         const canFit = compileCanFitFunction(orientation);
         const calculateEdges = compileEdgesFunction(orientation);
         return {

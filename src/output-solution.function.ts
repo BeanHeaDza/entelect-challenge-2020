@@ -10,6 +10,6 @@ export function outputSolution(
     const fileName = `${fileBase}_${score}`;
 
     const lines = usedShapes.map(s => `${s.id}|${s.cells.map(c => c.join(',')).join('|')}`);
-    writeFileSync(fileName + '.txt', lines.join('\n'), { encoding: 'UTF8' });
+    writeFileSync(fileName + '.txt', lines.join('\n'), { encoding: 'utf8' });
     prettyPrint(grid, fileName + '.png');
 }

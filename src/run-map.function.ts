@@ -37,14 +37,14 @@ export function runMap(mapNumber: number): number {
 
             if (best) {
                 const { id, cells } = best;
-                const available = input.availableShapes.find(a => a.id === id);
+                const available = input.availableShapes.find((a) => a.id === id);
 
                 usedShapes.push({ id, cells });
                 cells.forEach(([x, y]) => (grid[x][y] = id));
                 if (available && available.count > 1) {
                     available.count--;
                 } else if (available) {
-                    input.availableShapes = input.availableShapes.filter(a => a !== available);
+                    input.availableShapes = input.availableShapes.filter((a) => a !== available);
                 }
             }
         }

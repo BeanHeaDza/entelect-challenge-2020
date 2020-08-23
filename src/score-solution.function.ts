@@ -1,4 +1,4 @@
-import { IShape } from './shape/shape.model';
+import { IShape } from './shape';
 
 export function scoreSolution(
     grid: number[][],

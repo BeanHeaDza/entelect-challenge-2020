@@ -19,7 +19,7 @@ export function compileEdgesFunction(
         // Filter out edges that are pointing to cells in the shape
         .filter(([x1, y1]) => !orientation.cells.some(([x2, y2]) => x1 === x2 && y1 === y2));
 
-    const edgeCounts = countBy(edges, e => e.join(','));
+    const edgeCounts = countBy(edges, (e) => e.join(','));
     const groupedEdges: {
         top: [number, number][];
         bottom: [number, number][];
@@ -28,7 +28,7 @@ export function compileEdgesFunction(
         inner: { cell: [number, number]; count: number }[];
     } = { top: [], bottom: [], left: [], right: [], inner: [] };
     let totalEdges = 0;
-    Object.keys(edgeCounts).forEach(key => {
+    Object.keys(edgeCounts).forEach((key) => {
         const [x, y] = key.split(',').map(Number);
         if (y < 0) {
             groupedEdges.top.push([x, y]);
@@ -52,18 +52,19 @@ export function compileEdgesFunction(
     calculateEdgesCode += `let isTop = yOffset === 0;\nlet isBottom = yOffset + ${orientation.height} === grid[0].length;\n`;
     calculateEdgesCode += `let isLeft = xOffset === 0;\nlet isRight = xOffset + ${orientation.width} === grid.length;\n`;
     calculateEdgesCode += `if (!isTop) {\n${groupedEdges.top
-        .map(c => mapCellToIfStatement(c, 1))
+        .map((c) => mapCellToIfStatement(c, 1))
         .join('\n')}\n}\n`;
     calculateEdgesCode += `if (!isBottom) {\n${groupedEdges.bottom
-        .map(c => mapCellToIfStatement(c, 1))
+        .map((c) => mapCellToIfStatement(c, 1))
         .join('\n')}\n}\n`;
     calculateEdgesCode += `if (!isLeft) {\n${groupedEdges.left
-        .map(c => mapCellToIfStatement(c, 1))
+        .map((c) => mapCellToIfStatement(c, 1))
         .join('\n')}\n}\n`;
     calculateEdgesCode += `if (!isRight) {\n${groupedEdges.right
-        .map(c => mapCellToIfStatement(c, 1))
+        .map((c) => mapCellToIfStatement(c, 1))
         .join('\n')}\n}\n`;
-    calculateEdgesCode += groupedEdges.inner.map(e => mapCellToIfStatement(e.cell, e.count)).join('\n') + '\n';
+    calculateEdgesCode +=
+        groupedEdges.inner.map((e) => mapCellToIfStatement(e.cell, e.count)).join('\n') + '\n';
     calculateEdgesCode += 'filledEdges = totalEdges - emptyEdges;\n';
     calculateEdgesCode += 'return { filledEdges, totalEdges, emptyEdges };';
 
