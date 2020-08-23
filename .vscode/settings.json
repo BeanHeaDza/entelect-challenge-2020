@@ -1,0 +1,11 @@
+{
+    "cSpell.words": [
+        "entelect",
+        "sourcemap"
+    ],
+    "[typescript]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    }
+}

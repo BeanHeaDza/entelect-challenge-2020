@@ -1,0 +1,41 @@
+{
+    "name": "entelect-challenge-2020",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Adrian <BeanHeaDza@users.noreply.github.com>",
+    "license": "MIT",
+    "scripts": {
+        "build": "rollup -c",
+        "build:watch": "rollup -c --watch",
+        "start": "node dist/index.main.js"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.7.7",
+        "@babel/core": "^7.7.7",
+        "@babel/node": "^7.7.7",
+        "@babel/plugin-proposal-class-properties": "^7.7.4",
+        "@babel/preset-env": "^7.7.7",
+        "@babel/preset-typescript": "^7.7.7",
+        "@types/lodash": "^4.14.159",
+        "@types/node": "^12.11.7",
+        "@typescript-eslint/eslint-plugin": "^2.15.0",
+        "@typescript-eslint/parser": "^2.15.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.9.0",
+        "eslint-plugin-eslint-comments": "^3.1.2",
+        "eslint-plugin-import": "^2.19.1",
+        "glob": "^7.1.6",
+        "prettier": "^1.19.1",
+        "rollup": "^1.28.0",
+        "rollup-plugin-babel": "^4.3.3",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "typescript": "^3.7.4"
+    },
+    "dependencies": {
+        "canvas": "^2.6.1",
+        "core-js": "^3.6.2",
+        "lodash": "^4.17.20",
+        "rxjs": "^6.5.4"
+    }
+}
