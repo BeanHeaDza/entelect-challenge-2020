@@ -7,11 +7,13 @@ The specification of the challenge can be seen in the [Internal_Cup_2020.pdf](In
 ## Yarn
 ```
 yarn install
+yarn build
 yarn start
 ```
 ## npm
 ```
 npm install
+npm run build
 npm start
 ```
 
