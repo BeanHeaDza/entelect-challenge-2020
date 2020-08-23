@@ -1,5 +1,5 @@
 # What is this
-This is my solution for the  Entelect Internal Challenge 2020. This is not the solution we came up with after the 4.5 hours provided on the day. I have spent some time (around another 4 hours) optimizing the code adding a nice image visualizer of the output. With the new changes our total score went from 30,058,205 (the score we got on the day, placing us second, with the winner getting a score of 31,592,026) to 36,730,954.
+This is my solution for the Entelect Internal Challenge 2020. This is not the solution we came up with after the 4.5 hours provided on the day. I have spent some time (around another 6 hours) optimizing the code and adding a nice image visualizer of the output. With the new changes our total score went from 30,058,205 (the score we got on the day, placing us second, with the winner getting a score of 31,592,026) to 37,003,056.
 
 The specification of the challenge can be seen in the [Internal_Cup_2020.pdf](Internal_Cup_2020.pdf) file.
 

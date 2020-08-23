@@ -23,8 +23,8 @@ export function runMap(mapNumber: number): number {
                 for (let o = 0; o < shape.orientations.length; o++) {
                     if (shape.orientations[o].canFit(grid, x, y)) {
                         const edges = shape.orientations[o].calculateEdges(grid, x, y);
-                        const score = edges.filledEdges * 1024 + shape.capacity;
-                        if (!best || score > best.score) {
+                        const score = edges.filledEdges * 1024 - edges.emptyEdges * 256 + shape.capacity;
+                        if (!best || score >= best.score) {
                             best = {
                                 cells: shape.orientations[o].cells.map(([eX, eY]) => [eX + x, eY + y]),
                                 id: shape.id,
