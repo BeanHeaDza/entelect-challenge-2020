@@ -11,7 +11,7 @@ export function runMap(mapNumber: number): number {
     const grid = createGrid(input);
 
     let usedShapes: { id: number; cells: number[][] }[] = [];
-    // Loop trough the grid top -> down to then left -> right
+    // Loop trough the grid top -> down then left -> right
     for (let x = 0; x < grid.length; x++) {
         for (let y = 0; y < grid[x].length; y++) {
             let best: { id: number; cells: number[][]; score: number } | null = null;
