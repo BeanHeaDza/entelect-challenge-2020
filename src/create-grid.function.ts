@@ -2,9 +2,9 @@ import { IInput } from './read-input.function';
 
 export function createGrid({ blockedCells, columns, rows }: IInput): number[][] {
     const grid: number[][] = [];
-    for (let x = 0; x < columns; x++) {
+    for (let x = 0; x < rows; x++) {
         grid[x] = [];
-        for (let y = 0; y < rows; y++) {
+        for (let y = 0; y < columns; y++) {
             grid[x][y] = 0;
         }
     }

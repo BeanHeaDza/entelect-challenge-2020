@@ -8,7 +8,7 @@ export function scoreSolution(
     let finalScore = 0;
     let spacesFilled = 0;
     let totalCapacity = usedShapes
-        .map(s => (shapes.get(s.id) as IShape).capacity)
+        .map((s) => (shapes.get(s.id) as IShape).capacity)
         .reduce((sum, x) => sum + x, 0);
 
     for (let x = 0; x < grid.length; x++) {
